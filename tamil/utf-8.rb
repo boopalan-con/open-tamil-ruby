@@ -114,7 +114,7 @@ accent_au = accent_symbols[10]
 
 pulli_symbols = ["்"]
 
-agaram_letters = [
+$agaram_letters = [
     "க",
     "ச",
     "ட",
@@ -804,18 +804,28 @@ def uyir(idx)
     else
         return "Error"
     end
-    
 end
 
-puts(uyir(5))
-puts(uyir(56))
-puts(uyir(12))
-puts(uyir(7))
+# puts(uyir(5))
+# puts(uyir(56))
+# puts(uyir(12))
+# puts(uyir(7))
 
 
-# def agaram(idx):
-#     assert idx >= 0 and idx < agaram_len()
-#     return agaram_letters[idx]
+def agaram(idx)
+    if (0..11).include?(idx)
+    #assert idx >= 0 and idx < agaram_len()
+        return $agaram_letters[idx]
+    else
+        return "Error"
+    end
+    #return agaram_letters[idx]
+end
+
+puts(agaram(5))
+puts(agaram(56))
+puts(agaram(12))
+puts(agaram(7))
 
 
 # def mei(idx):
