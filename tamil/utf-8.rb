@@ -46,7 +46,7 @@ puts TA_UYIR_LEN
 
 
 # # List of letters you can use
-uyir_letters = ["அ", "ஆ", "இ", "ஈ", "உ", "ஊ", "எ", "ஏ", "ஐ", "ஒ", "ஓ", "ஔ"]
+$uyir_letters = ["அ", "ஆ", "இ", "ஈ", "உ", "ஊ", "எ", "ஏ", "ஐ", "ஒ", "ஓ", "ஔ"]
 vowel_a = "அ"
 vowel_aa = "ஆ"
 vowel_i = "இ"
@@ -796,10 +796,21 @@ def tamil_len()
     return len(tamil_letters)
 end
 
-# ## access the letters
-# def uyir(idx):
-#     assert idx >= 0 and idx < uyir_len()
-#     return uyir_letters[idx]
+## access the letters
+def uyir(idx)
+    if (0..11).include?(idx)
+    #raise idx >= 0 and idx < uyir_len()
+        return $uyir_letters[idx]
+    else
+        return "Error"
+    end
+    
+end
+
+puts(uyir(5))
+puts(uyir(56))
+puts(uyir(12))
+puts(uyir(7))
 
 
 # def agaram(idx):
